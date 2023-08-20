@@ -14,6 +14,7 @@ namespace ProjeP.Models.Sınıflar
         public string Tur { get; set; }
         public string Aciklama { get; set; }
         public int Yil { get; set; }
+        public string FotoUrl { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjeP.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,11 @@ namespace ProjeP.Controllers
 {
     public class HomeController : Controller
     {
+        context db = new context();
         public ActionResult Index()
         {
-            return View();
+            var degerler = db.Filmler.ToList();
+            return View(degerler);
         }
 
         public ActionResult About()
