@@ -4,7 +4,26 @@
 @{
     ViewBag.Title = "Tavsiye Ettiğim Filmler";
 }
-@foreach (var x in Model)
-{
-    <img src="@x.FotoUrl" alt="" width="900" ; height="450" />
-}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Film Listesi</h2>
+    @foreach (var x in Model)
+    {
+        <div style="border: 2px solid black; padding: 10px; margin: 10px;">
+            <p style="font-size: 16px; color: orangered; font-weight: bold;">@x.Ad</p>
+            <img src="@x.FotoUrl" style="height:auto; width:300px;" />
+            <div style="border: 1px solid gray; padding: 5px;">
+                <p style="font-size: 16px; color: black; font-weight: bold;">Açıklama:</p>
+                <p style="font-size: 16px; color: black; font-weight: normal;">@x.Aciklama</p>
+                <p style="font-size: 16px; color: black; font-weight: bold;">Tür: @x.Tur</p>
+            </div>
+            
+        </div>
+    }
+</body>
+</html>

@@ -138,6 +138,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Models\Sınıflar\Film.cs" />
+    <Compile Include="Models\Sınıflar\Önerilen Filmler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
