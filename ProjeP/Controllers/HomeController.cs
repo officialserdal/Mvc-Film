@@ -18,16 +18,12 @@ namespace ProjeP.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var degerler = db.Önerilen_Filmlers.ToList();
+            return View(degerler);
 
-            return View();
+           
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
     }
 }

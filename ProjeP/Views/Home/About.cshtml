@@ -1,7 +1,22 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@using ProjeP.Models.Sınıflar
+@model List<Önerilen_Filmler>
 
-<p>Use this area to provide additional information.</p>
+@{
+    ViewBag.Title = "Önerilen Filmler ";
+}
+<h2 style="text-align:center">Önerilen Filmler Listesi</h2>
+@foreach (var x in Model)
+{
+
+
+<div style="border: 2px solid black; padding: 10px; margin: 10px;">
+    <p style="font-size: 16px; color: orangered; font-weight: bold;">@x.FilmAdi</p>
+    <img src="@x.FotoUrl" style="height:auto; width:300px;" />
+    <div style="border: 1px solid gray; padding: 5px;">
+        <p style="font-size: 16px; color: black; font-weight: bold;">Açıklama:</p>
+        <p style="font-size: 16px; color: black; font-weight: normal;">@x.Açiklama</p>
+        <p style="font-size: 16px; color: black; font-weight: bold;">Tür: @x.Tür</p>
+    </div>
+
+</div>
+}

@@ -10,6 +10,8 @@ namespace ProjeP.Models
     public class context : DbContext
     {
         public DbSet<Film> Filmler { get; set; } 
+        public DbSet<Önerilen_Filmler> Önerilen_Filmlers{ get; set; } 
+
 
         
     }
